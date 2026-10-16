@@ -1,0 +1,116 @@
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  color: #1a1a1a;
+  overflow-x: hidden;
+}
+
+/* Custom Styles */
+.italic-text {
+  font-style: italic;
+}
+
+/* Navbar */
+.nav-link:hover {
+  color: #e2231a !important;
+}
+
+/* Hero Carousel */
+.hero-slide {
+  height: 580px;
+  background-size: cover;
+  background-position: center;
+}
+.slide-bg-1 {
+  background: linear-gradient(to right, rgba(0,0,0,0.2), rgba(0,0,0,0.7)), 
+              url('https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+}
+.slide-bg-2 {
+  background: linear-gradient(to right, rgba(0,0,0,0.8), rgba(0,0,0,0.3)), 
+              url('https://images.unsplash.com/photo-1558981806-ec527fa84c39?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+}
+.slide-bg-3 {
+  background: linear-gradient(to right, rgba(0,0,0,0.7), rgba(0,0,0,0.2)), 
+              url('https://images.unsplash.com/photo-1558981403-c5f9899a28bc?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+}
+
+/* Help Section */
+.help-card {
+  background-color: #262626;
+  clip-path: polygon(12px 0, 100% 0, 100% calc(100% - 12px), calc(100% - 12px) 100%, 0 100%, 0 12px);
+  transition: background-color 0.3s ease;
+}
+.help-card:hover {
+  background-color: #e2231a;
+  cursor: pointer;
+}
+
+/* Range Cards */
+.range-card {
+  position: relative;
+  overflow: hidden;
+  height: 480px;
+}
+.range-card img {
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+.range-card:hover img {
+  transform: scale(1.05);
+}
+.range-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0) 60%);
+}
+
+/* Program Cards */
+.program-card {
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  border-radius: 4px;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+}
+.program-card.tall {
+  height: 500px;
+}
+.program-card.short {
+  height: 240px;
+}
+.program-content {
+  background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0) 100%);
+  width: 100%;
+}
+
+/* Footer Links */
+.footer-links a:hover {
+  color: #e2231a !important;
+}
+
+/* Media Queries for Responsive Adjustments */
+@media (max-width: 991.98px) {
+  .hero-slide {
+    height: 440px;
+  }
+  .range-card {
+    height: 360px;
+  }
+  .program-card.tall {
+    height: 380px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .hero-slide {
+    height: 360px;
+  }
+  .range-card {
+    height: 280px;
+  }
+  .program-card.tall, .program-card.short {
+    height: 260px;
+  }
+}
